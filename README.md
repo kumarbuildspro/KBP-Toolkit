@@ -34,7 +34,7 @@ KumarBuildsPro is a modern, responsive and user-friendly website that provides m
 
 🌐 Live Website
 
-Coming Soon!
+https://kumarbuildspro.github.io/KBP-Toolkit/
 
 📱 Compatibility
 
