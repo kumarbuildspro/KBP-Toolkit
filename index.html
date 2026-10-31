@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101827">
+  <title>KumarBuildsPro | All-in-One Tools</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="brand">
+      <div class="brand-icon">K</div>
+      <div>
+        <h1>KumarBuildsPro</h1>
+        <p>All-in-One Tools</p>
+      </div>
+    </div>
+
+    <div class="header-actions">
+      <span id="clock">--:--:--</span>
+      <button id="themeBtn" class="theme-btn" type="button">☀️ Light</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <span class="eyebrow">YOUR SMART TOOLKIT</span>
+      <h2>Everything You Need,<br><span>In One Place.</span></h2>
+      <p>Simple, fast and useful tools for your everyday work.</p>
+    </section>
+
+    <section class="tools-section">
+      <div class="section-heading">
+        <div>
+          <h2>Explore Tools</h2>
+          <p>Choose a tool to get started.</p>
+        </div>
+        <span class="tool-count">09 TOOLS</span>
+      </div>
+
+      <div class="tools-grid">
+        <button class="tool-card active" data-tool="calculator">
+          <span class="tool-icon">🧮</span>
+          <strong>Calculator</strong>
+          <small>Quick calculations</small>
+        </button>
+
+        <button class="tool-card" data-tool="wordcounter">
+          <span class="tool-icon">📝</span>
+          <strong>Word Counter</strong>
+          <small>Count words and characters</small>
+        </button>
+
+        <button class="tool-card" data-tool="notes">
+          <span class="tool-icon">📒</span>
+          <strong>My Notes</strong>
+          <small>Save your important notes</small>
+        </button>
+
+        <button class="tool-card" data-tool="converter">
+          <span class="tool-icon">📏</span>
+          <strong>Unit Converter</strong>
+          <small>Convert common units</small>
+        </button>
+
+        <button class="tool-card" data-tool="todo">
+          <span class="tool-icon">✅</span>
+          <strong>To-Do List</strong>
+          <small>Manage your daily tasks</small>
+        </button>
+
+        <button class="tool-card" data-tool="stopwatch">
+          <span class="tool-icon">⏱️</span>
+          <strong>Stopwatch</strong>
+          <small>Track your time</small>
+        </button>
+
+        <button class="tool-card" data-tool="colorpicker">
+          <span class="tool-icon">🎨</span>
+          <strong>Color Picker</strong>
+          <small>Choose and copy colors</small>
+        </button>
+
+        <button class="tool-card" data-tool="random">
+          <span class="tool-icon">🎲</span>
+          <strong>Random Number</strong>
+          <small>Generate random numbers</small>
+        </button>
+
+        <button class="tool-card backup-card" data-tool="backup">
+          <span class="tool-icon">💾</span>
+          <strong>Backup Center</strong>
+          <small>Download and restore data</small>
+        </button>
+      </div>
+    </section>
+
+    <section class="workspace">
+      <div class="workspace-heading">
+        <div>
+          <span class="eyebrow">WORKSPACE</span>
+          <h2 id="workspaceTitle">Calculator</h2>
+        </div>
+        <span class="live-label"><span></span> READY TO USE</span>
+      </div>
+
+      <!-- CALCULATOR -->
+      <div class="tool-panel active" id="calculator">
+        <div class="calculator">
+          <input id="calcDisplay" class="calc-display" type="text"
+                 placeholder="0" readonly aria-label="Calculator display">
+          <div class="calc-grid">
+            <button class="calc-btn operator" data-value="C">C</button>
+            <button class="calc-btn operator" data-value="DEL">DEL</button>
+            <button class="calc-btn operator" data-value="%">%</button>
+            <button class="calc-btn operator" data-value="/">÷</button>
+
+            <button class="calc-btn" data-value="7">7</button>
+            <button class="calc-btn" data-value="8">8</button>
+            <button class="calc-btn" data-value="9">9</button>
+            <button class="calc-btn operator" data-value="*">×</button>
+
+            <button class="calc-btn" data-value="4">4</button>
+            <button class="calc-btn" data-value="5">5</button>
+            <button class="calc-btn" data-value="6">6</button>
+            <button class="calc-btn operator" data-value="-">−</button>
+
+            <button class="calc-btn" data-value="1">1</button>
+            <button class="calc-btn" data-value="2">2</button>
+            <button class="calc-btn" data-value="3">3</button>
+            <button class="calc-btn operator" data-value="+">+</button>
+
+            <button class="calc-btn zero" data-value="0">0</button>
+            <button class="calc-btn" data-value=".">.</button>
+            <button class="calc-btn equal" data-value="=">=</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- WORD COUNTER -->
+      <div class="tool-panel" id="wordcounter">
+        <div class="panel-card">
+          <h3>Word Counter</h3>
+          <p class="muted">Type or paste your text below.</p>
+          <textarea id="wordText" rows="7" placeholder="Start writing here..."></textarea>
+          <div class="stats-grid">
+            <div class="stat-box"><strong id="wordCount">0</strong><span>Words</span></div>
+            <div class="stat-box"><strong id="charCount">0</strong><span>Characters</span></div>
+            <div class="stat-box"><strong id="sentenceCount">0</strong><span>Sentences</span></div>
+          </div>
+          <button class="secondary-btn" id="clearWordText">Clear Text</button>
+        </div>
+      </div>
+
+      <!-- NOTES -->
+      <div class="tool-panel" id="notes">
+        <div class="panel-card">
+          <h3>My Notes</h3>
+          <p class="muted">Your notes are saved in this browser on this device.</p>
+          <input id="noteTitle" type="text" placeholder="Note title">
+          <textarea id="noteContent" rows="6" placeholder="Write your note here..."></textarea>
+          <div class="button-row">
+            <button class="primary-btn" id="saveNote">Save Note</button>
+            <button class="secondary-btn" id="clearNote">Clear</button>
+          </div>
+          <h3 class="subheading">Saved Notes <span id="noteCount" class="count-pill">0</span></h3>
+          <div id="notesList" class="saved-list"></div>
+        </div>
+      </div>
+
+      <!-- UNIT CONVERTER -->
+      <div class="tool-panel" id="converter">
+        <div class="panel-card">
+          <h3>Unit Converter</h3>
+          <label for="convertType">Conversion type</label>
+          <select id="convertType">
+            <option value="length">Length</option>
+            <option value="weight">Weight</option>
+            <option value="temperature">Temperature</option>
+          </select>
+
+          <label for="convertValue">Enter value</label>
+          <input id="convertValue" type="number" placeholder="Enter a number">
+
+          <div class="two-columns">
+            <div>
+              <label for="convertFrom">From</label>
+              <select id="convertFrom"></select>
+            </div>
+            <div>
+              <label for="convertTo">To</label>
+              <select id="convertTo"></select>
+            </div>
+          </div>
+
+          <button class="primary-btn full-btn" id="convertBtn">Convert</button>
+          <div class="result-box" id="convertResult">Your result will appear here.</div>
+        </div>
+      </div>
+
+      <!-- TODO -->
+      <div class="tool-panel" id="todo">
+        <div class="panel-card">
+          <h3>To-Do List</h3>
+          <p class="muted">Add tasks and keep track of your work.</p>
+          <div class="input-row">
+            <input id="todoInput" type="text" placeholder="Enter a new task">
+            <button class="primary-btn" id="addTodo">Add</button>
+          </div>
+          <div class="todo-summary">
+            <span>Total: <strong id="todoTotal">0</strong></span>
+            <span>Completed: <strong id="todoDone">0</strong></span>
+          </div>
+          <div id="todoList" class="todo-list"></div>
+        </div>
+      </div>
+
+      <!-- STOPWATCH -->
+      <div class="tool-panel" id="stopwatch">
+        <div class="panel-card center-card">
+          <h3>Stopwatch</h3>
+          <div class="stopwatch-display" id="stopwatchDisplay">00:00:00</div>
+          <div class="button-row center-row">
+            <button class="primary-btn" id="startWatch">Start</button>
+            <button class="secondary-btn" id="pauseWatch">Pause</button>
+            <button class="danger-btn" id="resetWatch">Reset</button>
+          </div>
+          <p class="muted small-text">The stopwatch resets when the page is refreshed.</p>
+        </div>
+      </div>
+
+      <!-- COLOR PICKER -->
+      <div class="tool-panel" id="colorpicker">
+        <div class="panel-card center-card">
+          <h3>Color Picker</h3>
+          <input id="colorInput" class="color-input" type="color" value="#6c63ff">
+          <div class="color-preview" id="colorPreview"></div>
+          <h2 id="colorCode">#6C63FF</h2>
+          <button class="primary-btn" id="copyColor">Copy Color Code</button>
+          <p class="muted small-text" id="colorStatus"></p>
+        </div>
+      </div>
+
+      <!-- RANDOM NUMBER -->
+      <div class="tool-panel" id="random">
+        <div class="panel-card center-card">
+          <h3>Random Number Generator</h3>
+          <div class="two-columns">
+            <div>
+              <label for="randomMin">Minimum</label>
+              <input id="randomMin" type="number" value="1">
+            </div>
+            <div>
+              <label for="randomMax">Maximum</label>
+              <input id="randomMax" type="number" value="100">
+            </div>
+          </div>
+          <div class="random-result" id="randomResult">?</div>
+          <button class="primary-btn" id="generateRandom">Generate Number</button>
+          <p class="muted small-text" id="randomStatus"></p>
+        </div>
+      </div>
+
+      <!-- BACKUP CENTER -->
+      <div class="tool-panel" id="backup">
+        <div class="panel-card">
+          <h3>💾 Backup Center</h3>
+          <p class="muted">
+            Download your saved data to your phone, or restore it later using a backup file.
+          </p>
+
+          <div class="stats-grid">
+            <div class="stat-box">
+              <strong id="backupNoteCount">0</strong>
+              <span>Saved Notes</span>
+            </div>
+            <div class="stat-box">
+              <strong id="backupTodoCount">0</strong>
+              <span>Saved Tasks</span>
+            </div>
+          </div>
+
+          <div class="backup-actions">
+            <div class="backup-item">
+              <div>
+                <strong>Complete Backup</strong>
+                <p>Download Notes, Tasks and Theme in one JSON file.</p>
+              </div>
+              <button class="primary-btn" id="downloadBackup">Download JSON</button>
+            </div>
+
+            <div class="backup-item">
+              <div>
+                <strong>Notes Backup</strong>
+                <p>Download all your saved notes as a text file.</p>
+              </div>
+              <button class="secondary-btn" id="downloadNotesTxt">Download Notes</button>
+            </div>
+
+            <div class="backup-item">
+              <div>
+                <strong>To-Do Backup</strong>
+                <p>Download your tasks as a text file.</p>
+              </div>
+              <button class="secondary-btn" id="downloadTodosTxt">Download Tasks</button>
+            </div>
+          </div>
+
+          <div class="restore-box">
+            <h3>Restore Backup</h3>
+            <p class="muted">Choose a JSON backup file that you downloaded earlier.</p>
+            <input id="backupFile" type="file" accept=".json,application/json">
+            <button class="primary-btn full-btn" id="restoreBackup">Import & Restore</button>
+            <p id="backupStatus" class="status-message" aria-live="polite"></p>
+          </div>
+
+          <p class="privacy-note">
+            Your saved data stays in this browser on this device. Download a backup
+            to keep a separate copy in your phone's Downloads folder.
+          </p>
+        </div>
+      </div>
+
+    </section>
+
+    <footer>
+      <p>© <span id="year"></span> <strong>KumarBuildsPro</strong>. All Rights Reserved.</p>
+      <p>Built for learning and productivity.</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
